@@ -1,0 +1,11 @@
+É uma melhoria no coletor de lixo (Garbage Collector, GC) que permite que a coleta do heap (memória usada por
+objetos) seja feita de forma paralela — ou seja, utilizando múltiplos núcleos da CPU para fazer a limpeza de
+forma mais rápida e eficiente.
+
+Como você pode usar indiretamente
+Você pode ativar ou configurar o coletor com parâmetros da JVM, como:
+
+java -XX:+UseParallelGC -jar minha-aplicacao.jar
+
+Ou deixar o G1GC como padrão (desde o Java 9), que no Java 10 passou a ter essa melhoria:
+java -XX:+UseG1GC -jar minha-aplicacao.jar
