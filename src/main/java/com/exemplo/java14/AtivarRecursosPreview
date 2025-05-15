@@ -1,0 +1,28 @@
+Para testar novas funcionalidades.
+
+Com preview ativado:
+Você poderá compilar e executar código que usa recursos como:
+
+record (em Java 14)
+instanceof com pattern matching (em Java 14)
+switch com expressão (switch expression)
+sealed classes (em versões mais recentes)
+Exemplo detalhado (Record no Java 14)
+
+public record Pessoa(String nome, int idade) {}
+
+Sem ativar preview:
+javac Pessoa.java
+
+Resultado:
+Pessoa.java:1: error: records are a preview feature and are disabled by default.
+public record Pessoa(String nome, int idade) {}
+       ^
+
+Com preview ativado:
+javac --enable-preview --release 14 Pessoa.java
+java --enable-preview Pessoa
+
+Resultado:
+Lucas
+35
