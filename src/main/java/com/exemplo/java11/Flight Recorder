@@ -1,0 +1,11 @@
+O Java Flight Recorder (JFR) permite gravar dados de performance e monitoramento em tempo real com impacto mínimo.
+
+Exemplo de uso com linha de comando:
+
+bash
+Copiar
+Editar
+java -XX:StartFlightRecording=duration=60s,filename=app.jfr -jar minha-aplicacao.jar
+Depois disso, você pode abrir o arquivo app.jfr no Java Mission Control (JMC) para visualizar eventos como uso de CPU, memória, GC, threads, etc.
+
+Muito útil para análise de produção com overhead baixíssimo.

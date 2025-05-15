@@ -1,0 +1,9 @@
+O Epsilon é um coletor de lixo "sem coleta" – ele aloca memória, mas nunca a libera.
+
+Exemplo de uso em linha de comando:
+
+bash
+Copiar
+Editar
+java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -Xmx1G -jar minha-aplicacao.jar
+Útil em benchmarks, testes de performance ou ambientes controlados onde o GC não deve interferir.
