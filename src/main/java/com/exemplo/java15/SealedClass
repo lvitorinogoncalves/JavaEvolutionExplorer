@@ -1,0 +1,33 @@
+//só Circulo e Quadrado podem estender Forma. Outras classes não podem, mesmo dentro do mesmo pacote.
+
+public sealed class Forma
+    permits Circulo, Quadrado {
+
+    public abstract double area();
+}
+
+final class Circulo extends Forma {
+    private double raio;
+
+    public Circulo(double raio) {
+        this.raio = raio;
+    }
+
+    @Override
+    public double area() {
+        return Math.PI * raio * raio;
+    }
+}
+
+final class Quadrado extends Forma {
+    private double lado;
+
+    public Quadrado(double lado) {
+        this.lado = lado;
+    }
+
+    @Override
+    public double area() {
+        return lado * lado;
+    }
+}
